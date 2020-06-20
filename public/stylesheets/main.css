@@ -50,7 +50,7 @@ footer {
     padding: 0px
 }
 
-textarea {
+.question {
     background: #E8EAFC;
 
     border-radius: 10px;
@@ -64,6 +64,8 @@ textarea {
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+
+    margin: auto;
 }
 
 select {
@@ -103,13 +105,20 @@ select {
     padding: 0px
 }
 
+.answer {
+    text-align: center;
+    margin: auto;
+    width: 200px;
+    height: 50px;   
+}
+
 a:link, a:visited {
     text-decoration: none;
     color: #E8EAFC;
     text-shadow: 2px 2px #000;
 }
 
-h1 {
+h1, h2, h3 {
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 4px 4px #000;

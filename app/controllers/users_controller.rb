@@ -22,6 +22,10 @@ class UsersController < ApplicationController
     get "/ask_the_eightball" do
         erb :'users/ask_question'
     end
+
+    post "/answer" do
+        erb :'users/eightball_answer'
+    end
     
     get "/logout" do
         session.destroy

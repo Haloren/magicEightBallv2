@@ -19,4 +19,11 @@ class UsersController < ApplicationController
         redirect to "/ask_the_eightball"
     end
 
+    
+
+    get "/logout" do
+        session.destroy
+        redirect to "/"
+    end
+
 end

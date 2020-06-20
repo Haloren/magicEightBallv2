@@ -6,7 +6,11 @@ body {
     text-align: center;
 }
 
-footer{
+footer {
+    bottom: 1%;
+    position: fixed;
+    color: #E8EAFC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px #000;
 }
 

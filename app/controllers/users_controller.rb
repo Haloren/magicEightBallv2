@@ -19,8 +19,10 @@ class UsersController < ApplicationController
         redirect to "/ask_the_eightball"
     end
 
+    get "/ask_the_eightball" do
+        erb :'users/ask_question'
+    end
     
-
     get "/logout" do
         session.destroy
         redirect to "/"

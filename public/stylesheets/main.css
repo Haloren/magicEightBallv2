@@ -1,6 +1,6 @@
 body {
-    background: rgb(166,63,251);
-    background: radial-gradient(circle, rgba(166,63,251,1) 0%, rgba(27,13,56,1) 100%);
+    background: rgb(72,24,150);
+    background: radial-gradient(circle, rgba(72,24,150,1) 0%, rgba(38,5,52,1) 100%);
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -14,17 +14,48 @@ footer {
     text-shadow: 2px 2px #000;
 }
 
-a:link {
-    color: #E8EAFC;
+.input_box {
+    background: #E8EAFC;
+
+    border-radius: 33px;
+    border: 1px solid #000;
+    padding: 1%;
+    width: 200px;
+    height: 25px;
+    box-shadow: 0px 3px 6px #000;
+
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
-a:visited{
-    color: #E8EAFC;
+
+.button {
+    background: #E8EAFC;
+
+    border-radius: 33px;
+    border: 1px solid #000;
+    padding: 1%;
+    width: 160px;
+    height: 30px;
+    box-shadow: 0px 3px 6px #000;
+
+    color: #000;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #E8EAFC;
+    text-shadow: 2px 2px #000;
+}
+
 
 h1 {
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 2px 2px #000;
+    text-shadow: 4px 4px #000;
 }
 
 h2, p, label {

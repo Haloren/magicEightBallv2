@@ -74,7 +74,8 @@ class UsersController < ApplicationController
 
     get "/how_to_use" do
         @user = current_account
-        
+
         erb :'how_to_use'
     end
+    
 end

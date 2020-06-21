@@ -1,12 +1,15 @@
 <br>
-    <p class="question"> Question populates here?</p>
+<p class="question"> <%= @question %>? </p>
 
 <div class="answer">
-    
-    <h1> Answer will show up here. </h1>
-</div>
 
-<br><br><br>
+    <% if @answer.nil? %>
+        <h1> <%= @default %> </h1>
+    <% else %>
+        <h1> <%= @answer.content %> </h1>
+    <% end %>
+
+</div>
 
 <br><br><br>
 <button class="shake" onClick="window.location.reload();">SHAKE AGAIN</button>

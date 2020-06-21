@@ -43,6 +43,27 @@ class UsersController < ApplicationController
     end
 
     post "/answer" do
+        # binding.pry
+        authenticate
+        @user = current_account
+
+        @question = params[:question] 
+        default = params[:list_id]
+        # binding.pry
+
+        if default == "default"
+            default_answers
+        else
+            #binding.pry 
+            answer_list = AnswerList.find_by(id: params[:list_id])
+            
+            if answer_list
+                @answers = answer_list.answers.select { |answer| answer.content != ""}
+                @answer = @answers.sample
+            else
+                redirect '/ask_the_eightball'
+            end
+        end
         erb :'users/eightball_answer'
     end
     

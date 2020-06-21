@@ -1,3 +1,4 @@
+require './config/environment'
 
 class ApplicationController < Sinatra::Base
 
@@ -9,7 +10,12 @@ class ApplicationController < Sinatra::Base
     end
 
     get "/" do
-        erb :'users/login'
+        # binding.pry
+        if logged_in?
+            redirect to "/ask_the_eightball"
+        else 
+            erb :'users/login'
+        end
     end
 
     helpers do 

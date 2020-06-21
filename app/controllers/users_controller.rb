@@ -17,13 +17,20 @@ class UsersController < ApplicationController
     end
     
     get "/login" do
-        # binding.pry
         erb :'users/login'
     end
 
     post "/login" do
-        @user = params[:email]
-        redirect to "/ask_the_eightball"
+        # binding.pry
+        @user = User.find_by(email: params[:email])
+
+        if @user && @user.authenticate(params[:password])
+            session[:user_id] = @user.id
+            redirect to "/ask_the_eightball"
+        else
+            @errors = "[\"Incorrect email and/or password\"]"
+            erb :'users/login'
+        end
     end
 
     get "/ask_the_eightball" do

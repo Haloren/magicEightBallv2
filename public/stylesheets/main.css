@@ -8,8 +8,18 @@ body {
     padding: 0;
 }
 
+.readme {
+    bottom: 1%;
+    right: 1%;
+    position: fixed;
+    color: #E8EAFC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px #000;
+}
+
 footer {
     bottom: 1%;
+    left: 1%;
     position: fixed;
     color: #E8EAFC;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

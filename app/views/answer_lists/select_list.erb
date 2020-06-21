@@ -1,0 +1,13 @@
+<div class="answer">    
+    <a href="/answerlists/new"> Create a new list? </a>
+</div>
+
+<br>
+<% if @user.answer_lists.size > 0 %>
+    <p> Select a list to Update or Delete </p>
+<% end %>
+
+
+<% @user.answer_lists.each do |list| %>
+    <li><a href ='/answerlists/<%= list.id %>/update'><b> <%= list.list_name %> </b></a></li>
+<% end %>

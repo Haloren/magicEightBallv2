@@ -158,3 +158,18 @@ h1, h2, h3 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 4px 4px #000;
 }
+
+li {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 4px 4px #000;
+    text-decoration: none;
+    
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #E8EAFC;
+    border-radius: 10%;
+    padding: 2px 2px;
+    margin: 2%;
+    box-shadow: 0px 3px 6px #000;
+}

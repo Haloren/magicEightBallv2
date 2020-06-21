@@ -3,7 +3,9 @@ class AnswerListsController < ApplicationController
     get "/answerlists" do
         authenticate
         @user = current_account
+
         # binding.pry
+        @answer_lists = @user.answer_lists
 
         erb :'answer_lists/select_list'
     end

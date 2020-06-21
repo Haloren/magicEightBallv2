@@ -1,12 +1,10 @@
-<div class="answer">    
-    <a href="/answerlists/new"> Create a new list? </a>
+<div class="create">    
+    <h3><a href="/answerlists/new"> Create a New List </a><h3>
 </div>
 
-<br>
 <% if @user.answer_lists.size > 0 %>
-    <p> Select a list to Update or Delete </p>
+    <h4> Select a list below to Update or Delete </h4>
 <% end %>
-
 
 <% @user.answer_lists.each do |list| %>
     <li><a href ='/answerlists/<%= list.id %>/update'><b> <%= list.list_name %> </b></a></li>

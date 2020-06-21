@@ -8,6 +8,12 @@ body {
     padding: 0;
 }
 
+h1, h2, h3, h4, h5 {
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 4px 4px #000;
+}
+
 .readme {
     bottom: 1%;
     right: 1%;
@@ -147,29 +153,22 @@ select {
     padding: 10px 0px;
 }
 
-a:link, a:visited {
+/* a:link, a:visited {
     text-decoration: none;
-    color: #E8EAFC;
-    text-shadow: 2px 2px #000;
+    text-shadow: 3px 3px #000;
+} */
+
+.create {
+
 }
 
-h1, h2, h3 {
+.lists {
+    list-style-position: inside;
+    border: 1px solid #fff;
+
     color: #fff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 4px 4px #000;
+    text-decoration: none;
 }
 
-li {
-    color: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-shadow: 4px 4px #000;
-    text-decoration: none;
-    
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid #E8EAFC;
-    border-radius: 10%;
-    padding: 2px 2px;
-    margin: 2%;
-    box-shadow: 0px 3px 6px #000;
-}

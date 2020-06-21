@@ -9,7 +9,9 @@
 
         <option value="default" selected> Magic Eight Ball </option>
 
-        <option value="list name">list name</option>
+        <% @user.answer_lists.each do |list|%>
+            <option value="<%= list.id %>"><%= list.list_name %></option>
+        <% end %>  
 
     </select>
 

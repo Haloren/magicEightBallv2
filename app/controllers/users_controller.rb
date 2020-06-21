@@ -34,6 +34,11 @@ class UsersController < ApplicationController
     end
 
     get "/ask_the_eightball" do
+        # binding.pry
+        authenticate
+        @user = current_account
+
+        @answer_lists = @user.answer_lists
         erb :'users/ask_question'
     end
 

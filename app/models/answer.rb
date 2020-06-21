@@ -1,4 +1,4 @@
-class Answer < ActiveRecord::Base #gets attributes from tables
+class Answer < ActiveRecord::Base 
 
     belongs_to :answer_list
 

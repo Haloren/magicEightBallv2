@@ -25,7 +25,14 @@ class AnswerListsController < ApplicationController
     end
 
     delete "/answerlists/:id/delete" do
+        authenticate
+        @user = current_account
+        # binding.pry
         
+        @list = AnswerList.find_by(id: params[:id])
+        @list.destroy
+        
+        redirect to '/answerlists'
     end
 
 end

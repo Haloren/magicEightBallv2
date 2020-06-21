@@ -21,6 +21,12 @@ h1, h2, h3, h4, h5 {
     color: #E8EAFC;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px #000;
+    text-decoration: none;
+}
+
+.howtouse {
+    text-align: left;
+    margin: 5%;
 }
 
 footer {
@@ -153,10 +159,11 @@ select {
     padding: 10px 0px;
 }
 
-/* a:link, a:visited {
+a:link, a:visited {
     text-decoration: none;
+    color: #E8EAFC;
     text-shadow: 3px 3px #000;
-} */
+}
 
 .create {
 

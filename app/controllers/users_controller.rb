@@ -72,4 +72,9 @@ class UsersController < ApplicationController
         redirect to "/"
     end
 
+    get "/how_to_use" do
+        @user = current_account
+        
+        erb :'how_to_use'
+    end
 end

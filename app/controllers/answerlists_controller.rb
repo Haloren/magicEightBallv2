@@ -1,0 +1,6 @@
+class AnswerListsController < ApplicationController
+
+
+
+
+end

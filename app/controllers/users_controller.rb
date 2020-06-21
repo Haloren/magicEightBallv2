@@ -5,8 +5,15 @@ class UsersController < ApplicationController
     end
 
     post "/create_account" do
-        @user = User.create(parmas)
-        redirect to "/ask_the_eightball"
+        # binding.pry
+        @user = User.create(params)
+        if @user.valid?
+            session[:user_id] = @user.id
+            redirect to "/ask_the_eightball"
+        else
+            @errors = @user.errors.full_messages
+            erb :'users/create_account'
+        end
     end
     
     get "/login" do

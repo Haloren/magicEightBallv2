@@ -1,23 +1,23 @@
 <form action="/answerlists" method="POST">
 
-    <input type="submit" value="Create List">
+    <input type="submit" value="Create List" class="button">
     <br>
     
-    <input type="text" name="list_name" placeholder="Name of Answer List" required>
+    <small><input type="text" name="list_name" placeholder="Name of Answer List" class="input_box" required></small>
     <br>
 
     <% counter = 0%>
     <% while counter < 20 %>
         <%if counter < 1%>
-            <br><input type="text" name="answers[]" placeholder="Add an Answer HERE" maxlength="25"  required>
+            <br><small><input type="text" name="answers[]" placeholder="Add an Answer HERE" maxlength="25" class="input_box" required></small>
         <% else %>
-            <br><input type="text" name="answers[]" placeholder="Add an Answer HERE" maxlength="25">
+            <br><small><input type="text" name="answers[]" placeholder="Add an Answer HERE" maxlength="25" class="input_box"></small>
         <% end %>
         <% counter += 1%>
     <% end %>
 
     <br>
-    <input type="submit" value="Create List">
+    <input type="submit" value="Create List" class="button">
 
 </form>
 <br><br>

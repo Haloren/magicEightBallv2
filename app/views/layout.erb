@@ -28,7 +28,7 @@
             <footer> 
 
                 <% if logged_in? %>
-                <small><b><a href="/logout">LOG OUT [ <%= @user.username %> ]</a></b></small>
+                    <a href="/logout"><small><b>LOG OUT [ <%= @user.username %> ] </b></small></a>
                 <% end %>
 
                 <small> &copy;2020 MagicEightBallv2 </small>

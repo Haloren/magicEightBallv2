@@ -15,6 +15,16 @@ class AnswerListsController < ApplicationController
         @user = current_account
         # binding.pry
 
+        @answer_list = AnswerList.create(list_name: params[:list_name], user_id: @user.id)
+
+        # binding.pry
+        params[:answers].each do |answer|
+            Answer.create(content: answer, answer_list_id: @answer_list.id)
+        end
+
+        @answers = @answer_list.answers.select {|answer| answer!=""}
+
+        # binding.pry
         erb :'answer_lists/select_list'
     end
 

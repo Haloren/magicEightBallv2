@@ -1,12 +1,17 @@
 class UsersController < ApplicationController
 
     get "/create_account" do
-        erb :'users/create_account'
+        if logged_in?
+            redirect to "/ask_the_eightball"
+        else
+            erb :'users/create_account'     
+        end
     end
 
     post "/create_account" do
         # binding.pry
         @user = User.create(params)
+        
         if @user.valid?
             session[:user_id] = @user.id
             redirect to "/ask_the_eightball"
@@ -14,10 +19,14 @@ class UsersController < ApplicationController
             @errors = @user.errors.full_messages
             erb :'users/create_account'
         end
+
     end
     
     get "/login" do
-        erb :'users/login'
+        if logged_in?
+            redirect to "/ask_the_eightball"
+        end
+            erb :'users/login'
     end
 
     post "/login" do

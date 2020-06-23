@@ -1,8 +1,10 @@
+<%# <img src="/images/AnswerEightBall.png" alt="Eight ball blank triangle"> %>
+
 <br>
 <p class="question"> <%= @question %>? </p>
 
 <div class="answer">
-
+    
     <% if @answer.nil? %>
         <h1> <%= @default %> </h1>
     <% else %>

@@ -38,60 +38,69 @@ class AnswerListsController < ApplicationController
 
     get "/answerlists/:id" do
         authenticate
-        @user = current_account
-        # binding.pry
+        @list = AnswerList.find_by(id: params[:id])
 
-        erb :'answer_lists/select_list'
+        if logged_in? && @list.user == current_account
+            @user = current_account
+            erb :'answer_lists/select_list'
+        else
+            redirect to '/ask_the_eightball'
+        end
+
     end
 
     get "/answerlists/:id/update" do
         authenticate
-        @user = current_account
-        # binding.pry
-
         @list = AnswerList.find_by(id: params[:id])
-        # binding.pry
-
-        erb :'answer_lists/update_list'
+        
+        if logged_in? && @list.user == current_account
+            @user = current_account
+            erb :'answer_lists/update_list'
+        else
+            redirect to '/ask_the_eightball'
+        end
+        
     end
 
     patch "/answerlists/:id" do
         authenticate
-        @user = current_account
-        # binding.pry 
-
         @list = AnswerList.find_by(id: params[:id])
-        # binding.pry
 
-        counter = 0
-        while counter < 20
-            old_answer = @list.answers[counter].content
-            new_answer = params[:answers][counter]
-            
-            # binding.pry
-            if old_answer != new_answer
-                @list.answers[counter].content = params[:answers][counter]
-                @list.answers[counter].save
+        if logged_in? && @list.user == current_account
+            @user = current_account
+
+            counter = 0
+            while counter < 20
+                old_answer = @list.answers[counter].content
+                new_answer = params[:answers][counter]
+                
+                if old_answer != new_answer
+                    @list.answers[counter].content = params[:answers][counter]
+                    @list.answers[counter].save
+                end
+                counter += 1
             end
-            counter += 1
+            @list.save
+            erb :'answer_lists/select_list'      
+        else 
+            redirect to '/ask_the_eightball'
+        end 
 
-        end
-        
-        # binding.pry
-        @list.save
-
-        erb :'answer_lists/select_list'
     end
 
     delete "/answerlists/:id/delete" do
         authenticate
-        @user = current_account
-        # binding.pry
-        
         @list = AnswerList.find_by(id: params[:id])
-        @list.destroy
 
-        redirect to '/answerlists'
+        if logged_in? && @list.user == current_account
+            @user = current_account
+        
+            @list.destroy
+            redirect to '/answerlists'
+        else
+            redirect to '/ask_the_eightball'
+        end
+
     end
 
 end

@@ -55,6 +55,12 @@ class ApplicationController < Sinatra::Base
                 "You may rely on it."].sample
         end
 
+        def check_list
+            if !@list || @list.user != current_account
+                redirect to '/ask_the_eightball'
+            end
+        end
+
     end
 
 end

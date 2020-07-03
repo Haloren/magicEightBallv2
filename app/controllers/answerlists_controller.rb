@@ -63,7 +63,9 @@ class AnswerListsController < ApplicationController
         check_list
         
         @user = current_account
+        
         @list.list_name = params[:list_name]
+
         counter = 0
         while counter < 20
             old_answer = @list.answers[counter].content

@@ -1,4 +1,6 @@
 # Magic Eight Ball v2
+### Youtube Video Demo: https://youtu.be/aiIvlvOE3jY 
+### DEV post: https://dev.to/haloren/programmable-magic-eight-ball-1n5m
 Use the Magic Eight Ball to find answers to your everyday questions,<br>
 or decide your own fate by creating your own custom answers to appear when you ask the Magic Eight Ball.<br>
 - Can't decide where to eat? then make a list of places to go and ask the Eight Ball to decide for you.<br>

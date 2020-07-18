@@ -1,17 +1,19 @@
 # Magic Eight Ball v2
 ### Youtube Video Demo: https://youtu.be/aiIvlvOE3jY 
 ### DEV post: https://dev.to/haloren/programmable-magic-eight-ball-1n5m
-### Heroku Link: 
+### Heroku Link: https://tranquil-basin-85932.herokuapp.com/
 Use the Magic Eight Ball to find answers to your everyday questions,<br>
 or decide your own fate by creating your own custom answers to appear when you ask the Magic Eight Ball.<br>
 - Can't decide where to eat? then make a list of places to go and ask the Eight Ball to decide for you.<br>
 - Can't decide what movie to watch? then make a list of movies and ask the Eight Ball to decide for you.<br>
 What can the Eight Ball help decide for you?<br>
 
-# Install Instructions
+# Install Instructions (for local environment)
 1. If you'd like to check this out yourself fork it from GitHub
-2. In the terminal run bundle
-3. In the terminal run shotgun to start on your local server
+2. In the Gemfile comment back in group development (lines 23-25)
+    (You will need gem SQLite3 to run shotgun locally) 
+3. Run bundle
+4. In the terminal run shotgun to start on your local server.
 
 # Usage
 If you dont already have an account sign up or login.

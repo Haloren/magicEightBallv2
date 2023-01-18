@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem "sinatra", "~> 2.0"
 
-gem "activerecord", "~> 6.0", :require => 'active_record'
+gem "activerecord", "~> 6.1", :require => 'active_record'
 
 gem "sinatra-activerecord", "~> 2.0", :require => 'sinatra/activerecord'
 
